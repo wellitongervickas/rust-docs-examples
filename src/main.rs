@@ -1,11 +1,11 @@
-// fn main() {
+// fn main10() {
 //     let mut x= 0;
 //     println!("The value of x is: {x}");
 //     x = 6;
 //     println!("The value of x is: {x}");
 // }
 
-// fn main() {
+// fn main9() {
 //     let x = 5;
 
 //     let x = x + 1;
@@ -18,7 +18,7 @@
 //     println!("The value of x is: {x}");
 // }
 
-// fn main() {
+// fn main8() {
 //     // addition
 //     let sum = 5 + 10;
 //     println!("The value of sum is: {sum}");
@@ -44,7 +44,7 @@
 //     println!("The value of remainder is: {remainder}");
 // }
 
-// fn main() {
+// fn main7() {
 //     let tup: (i32, f64, u8) = (500, 6.4, 1);
 
     
@@ -66,7 +66,7 @@
 
 // use std::io;
 
-// fn main() {
+// fn main6() {
 //     let list = [1, 2, 3, 4, 5];
 
 //     println!("Please enter an array index.");
@@ -87,7 +87,7 @@
 //     println!("The value of the element at index {index} is: {element}");
 // }
 
-// fn main() {
+// fn main5() {
 //     print_labeled_measurement(5, 'h');
 // }
 
@@ -95,11 +95,12 @@
 //     println!("The measurement is: {value}{unit_label}");
 // }
 
-// fn main() {
-//     let x = let y = 6;
+// fn main4() {
+//     // does not work
+//     // let x = let y = 6;
 // }
 
-// fn main() {
+// fn main3() {
 //     let x = plus_one(5);
 
 //     println!("The value of x is: {x}");
@@ -109,13 +110,13 @@
 //     return x + 1;
 // }
 
-// fn main() {
+// fn main1() {
 //     loop {
 //         println!("again!");
 //     }
 // }
 
-// fn main() {
+// fn main2() {
 //     let mut counter = 0;
 //     // expression not statement
 //     let result = loop {
@@ -129,7 +130,7 @@
 //     println!("The result is {result}");
 // }
 
-// fn main() {
+// fn main11() {
 //     let mut count = 0;
 
 //     'counting_up: loop {
@@ -155,14 +156,224 @@
 //     }
 // }
 
+// fn main412() {
+//     let mut number = 3;
+
+//     while number !=0 {
+//         println!("{number}");
+
+//         number -= 1;
+//     }
+
+//     println!("LIFTOFF!!!");
+// }
+
+// fn main1523d() {
+//     let a = [10, 20, 30, 40, 50];
+//     let mut index = 0;
+
+//     //while index < 5 // throws
+//     while index < a.len() {
+//         println!("the value is: {}", a[index]);
+
+//         index +=1;
+//     }
+// }
+
+// fn main() {
+//     let a = [10,20,30,40,50];
+
+//     for element in a {
+//         println!("the value is {element}");
+//     }
+// }
+
+// fn main() {
+//     for number in (1..9).rev() {
+//         println!("{number}!");
+//     }
+
+//     println!("LFG");
+// }
+
+// fn main() {
+//     let s1 = String::from("hello");
+
+//     let len = calculate_length(&s1);
+
+//     println!("The length of '{}' is {}.", s1, len);
+// }
+
+// fn calculate_length(s: &String) -> usize {
+//     s.len()
+// }
+
+// fn main() {
+//     let mut s = String::from("hello");
+
+//     change(&mut s);
+// }
+
+// fn change(some_string: &mut String) {
+//     some_string.push_str(", world");
+// }
+
+// fn main() {
+//     let mut s = String::from("hello world");
+
+//     let word = first_word(&s);
+//     println!("the first word is: {}", word);
+    
+
+//     s.clear(); // error!
+
+// }
+
+// fn main() {
+//     let my_string = String::from("hello world");
+
+//     // `first_word` works on slices of `String`s, whether partial or whole
+//     let word = first_word(&my_string[0..6]);
+//     let word = first_word(&my_string[..]);
+//     // `first_word` also works on references to `String`s, which are equivalent
+//     // to whole slices of `String`s
+//     let word = first_word(&my_string);
+
+//     let my_string_literal = "hello world";
+
+//     // `first_word` works on slices of string literals, whether partial or whole
+//     let word = first_word(&my_string_literal[0..6]);
+//     let word = first_word(&my_string_literal[..]);
+
+//     // Because string literals *are* string slices already,
+//     // this works too, without the slice syntax!
+//     let word = first_word(my_string_literal);
+// }
+
+
+///returns only index found space
+// fn first_word(s: &String) -> usize {
+//     let bytes = s.as_bytes();
+
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             return i;
+//         }
+//     }
+
+//     s.len()
+// }
+
+
+/// accept slice string and return sliced text string
+// fn first_word(s: &str) -> &str {
+//     let bytes = s.as_bytes();
+
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             // return &s[..i]; wors as well
+//             return &s[0..i];
+//         }
+//     }
+
+//     &s[..]
+// }
+
+// fn first_word(s: &String) -> &str {
+//     let bytes = s.as_bytes();
+
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             // return &s[..i]; wors as well
+//             return &s[0..i];
+//         }
+//     }
+
+//     &s[..]
+// }
+
+// struct User {
+//     active: bool,
+//     username: String,
+//     email: String,
+//     sign_in_count: u64,
+// }
+
+// fn main() {
+//     // let user1 = User {
+//     //     active: true,
+//     //     username: String::from("someusername123"),
+//     //     email: String::from("someone@example.com"),
+//     //     sign_in_count: 1,
+//     // };
+
+//     let user1 = build_user(String::from("someusername123"), String::from("someusername123"));
+
+//     let user12 = user1.email;
+
+//     println!("{user12}");
+
+//     let user2 = User {
+//         email: String::from("another@example.com"),
+//         ..user1
+//     };
+// }
+
+// fn build_user(email: String, username: String) -> User {
+//     User {
+//         active: true,
+//         username,
+//         email,
+//         sign_in_count: 1,
+//     }
+// }
+
+// fn main() {
+//     let width1 = 30;
+//     let height1 = 50;
+
+//     println!(
+//         "The area of the rectangle is {} square pixels.",
+//         area(width1, height1)
+//     );
+// }
+
+// fn area(width: u32, height: u32) -> u32 {
+//     width * height
+// }
+
+///tuples
+
+// fn main() {
+//     let rect1 = (30, 50);
+
+//     println!(
+//         "The area of the rectangle is {} square pixels.",
+//         area(rect1)
+//     );
+// }
+
+// fn area(dimensions: (u32, u32)) -> u32 {
+//     dimensions.0 * dimensions.1
+// }
+
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 fn main() {
-    let mut number = 3;
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
 
-    while number !=0 {
-        println!("{number}");
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        area(&rect1)
+    );
+}
 
-        number -= 1;
-    }
-
-    println!("LIFTOFF!!!");
+fn area(rectangle: &Rectangle) -> u32 {
+    rectangle.width * rectangle.height
 }
